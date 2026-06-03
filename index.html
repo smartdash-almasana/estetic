@@ -667,6 +667,49 @@
       box-shadow: 0 12px 40px rgba(23,21,18,0.08);
     }
 
+    .portrait,
+    .about-image {
+      background: none;
+    }
+
+    .portrait::before,
+    .portrait::after,
+    .about-image::before,
+    .about-image::after {
+      display: none;
+    }
+
+    .portrait img,
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .treatment {
+      gap: 22px;
+    }
+
+    .treatment-image {
+      width: 100%;
+      height: 156px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255, 250, 243, 0.08);
+      margin-bottom: 4px;
+    }
+
+    .treatment-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.92) contrast(0.98);
+    }
+
+    .treatment.has-image {
+      min-height: 385px;
+    }
+
     @media (max-width: 960px) {
       .nav-links a:not(.btn) {
         display: none;
@@ -724,6 +767,10 @@
 
       .about-image {
         min-height: 420px;
+      }
+
+      .treatment-image {
+        height: 220px;
       }
 
       .footer-bottom {
@@ -843,7 +890,7 @@
           </div>
 
           <div class="hero-media" aria-hidden="true">
-            <div class="portrait"></div>
+            <div class="portrait"><img src="/assets/detalle.jpg" alt="Detalle premium de estética boutique con productos y textiles en tonos marfil" loading="eager" /></div>
             <div class="treatment-card">
               <div class="number">01</div>
               <p>Primero escuchamos tu objetivo. Después recomendamos el tratamiento adecuado para tu piel, cuerpo y rutina.</p>
@@ -900,7 +947,8 @@
             </div>
 
             <div class="treatments">
-              <article class="treatment">
+              <article class="treatment has-image">
+                <div class="treatment-image"><img src="/assets/facial.jpg" alt="Tratamiento facial profesional en gabinete estético premium" loading="lazy" /></div>
                 <div>
                   <h3>Limpieza facial profunda</h3>
                   <p>Higiene, extracción y renovación para una piel más luminosa y equilibrada.</p>
@@ -908,7 +956,8 @@
                 <small>Facial</small>
               </article>
 
-              <article class="treatment">
+              <article class="treatment has-image">
+                <div class="treatment-image"><img src="/assets/corporal.jpg" alt="Tratamiento corporal y maderoterapia en centro estético boutique" loading="lazy" /></div>
                 <div>
                   <h3>Tratamientos corporales</h3>
                   <p>Protocolos orientados a tonificar, modelar y acompañar objetivos corporales.</p>
@@ -916,7 +965,8 @@
                 <small>Corporal</small>
               </article>
 
-              <article class="treatment">
+              <article class="treatment has-image">
+                <div class="treatment-image"><img src="/assets/tecnologia.jpg" alt="Tecnología estética moderna para tratamientos seguros" loading="lazy" /></div>
                 <div>
                   <h3>Depilación definitiva</h3>
                   <p>Sesiones programadas con evaluación previa y seguimiento personalizado.</p>
@@ -924,7 +974,8 @@
                 <small>Tecnología</small>
               </article>
 
-              <article class="treatment">
+              <article class="treatment has-image">
+                <div class="treatment-image"><img src="/assets/hero.jpg" alt="Profesional de estética en ambiente clínico boutique" loading="lazy" /></div>
                 <div>
                   <h3>Maderoterapia</h3>
                   <p>Técnica manual para drenaje, modelado y mejora de la apariencia corporal.</p>
@@ -954,7 +1005,7 @@
 
       <section class="section" id="nosotros">
         <div class="container about-grid">
-          <div class="about-image" aria-hidden="true"></div>
+          <div class="about-image"><img src="/assets/gabinete.jpg" alt="Gabinete de estética boutique con camilla y ambiente cálido profesional" loading="lazy" /></div>
           <div class="about-copy">
             <div class="eyebrow">El estudio</div>
             <h2 class="serif">Criterio profesional en una experiencia cercana.</h2>

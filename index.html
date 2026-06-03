@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belleza Integral Studio | Estética Premium en Buenos Aires</title>
-  
-  <!-- Sleek Interface Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belleza Integral Studio | Estética Avanzada</title>
+  <meta name="description" content="Centro de estética avanzada. Tratamientos faciales y corporales con atención personalizada. Reservá tu consulta por WhatsApp." />
   <style>
-    /* VARIABLES SISTEMA SLEEK INTERFACE */
     :root {
-      --bg: #FCF8F5;
-      --bg-cream: #FAF3EE;
-      --primary: #D4A373;
-      --primary-light: #E7C29E;
-      --primary-dark: #A77749;
-      --text-dark: #4A4440;
-      --text-muted: #8A817C;
-      --border-color: #EEDFD2;
-      --card-bg: rgba(255, 255, 255, 0.8);
-      --whatsapp: #25D366;
-      --whatsapp-hover: #20BA56;
-      
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-sans: 'Inter', system-ui, sans-serif;
-      
-      --shadow-sm: 0 2px 8px rgba(74, 68, 64, 0.04);
-      --shadow-md: 0 8px 24px rgba(74, 68, 64, 0.06);
-      --shadow-lg: 0 16px 40px rgba(74, 68, 64, 0.1);
-      
-      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --ivory: #f7f3ec;
+      --porcelain: #fffaf3;
+      --sand: #d8c6ac;
+      --stone: #82796d;
+      --charcoal: #171512;
+      --muted: #5f584e;
+      --gold: #b99a5f;
+      --line: rgba(23, 21, 18, 0.12);
+      --soft: rgba(216, 198, 172, 0.34);
+      --shadow: 0 24px 80px rgba(23, 21, 18, 0.10);
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
@@ -46,1700 +28,1033 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text-dark);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      font-size: 16px;
-      overflow-x: hidden;
+      margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: Inter, Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
     }
 
-    /* CONTENEDOR GENERAL */
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
     .container {
-      width: 100%;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 24px;
-      padding-right: 24px;
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    /* BOTONES */
+    .eyebrow {
+      font-size: 0.76rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: -0.035em;
+      font-weight: 400;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-      transition: var(--transition-smooth);
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-size: 0.93rem;
+      font-weight: 650;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
       cursor: pointer;
-      text-align: center;
-      border: none;
-      gap: 8px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
-      background-color: var(--primary);
-      color: #ffffff !important;
-      box-shadow: 0 4px 14px rgba(212, 163, 115, 0.25);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 163, 115, 0.35);
+      background: var(--charcoal);
+      color: var(--porcelain);
+      border: 1px solid var(--charcoal);
     }
 
     .btn-secondary {
-      background-color: transparent;
-      color: var(--text-dark) !important;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--line);
+      color: var(--charcoal);
+      background: rgba(255, 250, 243, 0.56);
+      backdrop-filter: blur(12px);
     }
 
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      background-color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background-color: var(--whatsapp);
-      color: #ffffff !important;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-whatsapp:hover {
-      background-color: var(--whatsapp-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    .btn-full {
-      width: 100%;
-    }
-
-    /* BADGE CHIPS */
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background-color: rgba(212, 163, 115, 0.1);
-      color: var(--primary-dark);
-      margin-bottom: 12px;
-    }
-
-    /* DEMO INTERACTIVE BANNER */
-    .demo-banner {
-      background-color: var(--text-dark);
-      color: #ffffff;
-      padding: 10px 24px;
-      position: relative;
-      z-index: 1000;
-      font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .demo-banner-content {
+    .nav {
+      position: fixed;
+      z-index: 40;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1180px, calc(100% - 32px));
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      gap: 10px;
+      padding: 12px 14px 12px 18px;
+      border: 1px solid rgba(23, 21, 18, 0.10);
+      border-radius: 999px;
+      background: rgba(247, 243, 236, 0.78);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 10px 40px rgba(23, 21, 18, 0.08);
     }
 
-    .demo-text strong {
-      color: var(--primary);
-    }
-
-    .demo-action {
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 3px 10px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .demo-close {
-      background: transparent;
-      border: none;
-      color: #ffffff;
-      font-size: 18px;
-      cursor: pointer;
-      opacity: 0.7;
-    }
-
-    .demo-close:hover {
-      opacity: 1;
-    }
-
-    /* HEADER & NAVIGATION */
-    header {
-      background: rgba(252, 248, 245, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      transition: var(--transition-smooth);
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-    }
-
-    .logo-container {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      min-width: 0;
     }
 
-    .logo-badge {
-      width: 32px;
-      height: 32px;
+    .brand-mark {
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      background-color: var(--primary);
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 28% 18%, #fff7e7 0 18%, transparent 19%),
+        linear-gradient(145deg, #181511, #8a6f3b);
+      color: var(--porcelain);
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .brand-text {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
+      flex-direction: column;
+      line-height: 1.05;
     }
 
-    .logo {
-      font-family: var(--font-sans);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-dark);
-      letter-spacing: -0.5px;
+    .brand-text strong {
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
     }
 
-    .logo span {
-      font-weight: 300;
-      color: var(--text-muted);
+    .brand-text span {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
-      list-style: none;
       align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-muted);
-      position: relative;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--text-dark);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      background-color: var(--primary);
-      transition: var(--transition-smooth);
-    }
-
-    .nav-links a:hover::after, .nav-links a.active::after {
-      width: 100%;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text-dark);
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* MOBILE NAV BAR DRAWER */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 80%;
-      max-width: 360px;
-      background-color: var(--bg);
-      z-index: 1001;
-      padding: 40px 32px;
-      box-shadow: -10px 0 30px rgba(74, 68, 64, 0.1);
-      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .mobile-menu.active {
-      right: 0;
-    }
-
-    .mobile-menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(74, 68, 64, 0.4);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: none;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .mobile-menu-overlay.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .mobile-menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 48px;
-    }
-
-    .mobile-nav-links {
-      display: flex;
-      flex-direction: column;
       gap: 24px;
-      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    .mobile-nav-links a {
-      font-size: 20px;
-      font-family: var(--font-display);
-      font-weight: 500;
-      color: var(--text-dark);
+    .nav-links a:hover {
+      color: var(--charcoal);
     }
 
-    .mobile-menu-footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-    }
-
-    /* HERO SECTION */
     .hero {
-      padding: 80px 0;
-      background: radial-gradient(circle at 80% 20%, #FAF3EE 0%, var(--bg) 60%);
+      min-height: 100vh;
+      padding: 132px 0 72px;
+      display: grid;
+      align-items: center;
       position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(185, 154, 95, 0.16), transparent 28%),
+        radial-gradient(circle at 90% 80%, rgba(216, 198, 172, 0.42), transparent 33%);
+      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.10fr 0.90fr;
-      gap: 48px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 64px;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-tag {
-      display: inline-block;
-      padding: 6px 14px;
-      background-color: rgba(212, 163, 115, 0.10);
-      color: var(--primary-dark);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      border-radius: 50px;
-      margin-bottom: 24px;
+    .hero-copy {
+      max-width: 590px;
     }
 
     .hero h1 {
-      font-family: var(--font-display);
-      font-size: 48px;
-      font-weight: 500;
-      line-height: 1.15;
-      color: var(--text-dark);
-      margin-bottom: 24px;
+      margin: 18px 0 20px;
+      font-size: clamp(3.3rem, 7vw, 6.6rem);
+      line-height: 0.92;
     }
 
-    .hero h1 span.italic {
-      display: inline-block;
-      font-style: italic;
+    .hero p {
+      max-width: 530px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.55vw, 1.18rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-proof {
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 540px;
+    }
+
+    .hero-proof strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 1.55rem;
       font-weight: 400;
     }
 
-    .hero-subtitle {
-      font-size: 16px;
-      color: var(--text-muted);
-      margin-bottom: 40px;
-      max-width: 500px;
-      line-height: 1.7;
+    .hero-proof span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-top: 2px;
     }
 
-    .hero-cta {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-img-wrapper {
+    .hero-media {
       position: relative;
+      min-height: 640px;
     }
 
-    .hero-img-container {
-      width: 100%;
-      height: 500px;
-      border-radius: 20px;
+    .portrait {
+      position: absolute;
+      inset: 0 0 auto auto;
+      width: min(520px, 100%);
+      height: 620px;
+      border-radius: 44px;
+      background:
+        linear-gradient(180deg, rgba(23,21,18,0.02), rgba(23,21,18,0.15)),
+        radial-gradient(circle at 55% 20%, rgba(255,250,243,0.94), transparent 13%),
+        linear-gradient(135deg, #e8ddcf 0%, #c7b091 40%, #f5efe6 100%);
+      box-shadow: var(--shadow);
       overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      border: 6px solid #ffffff;
+    }
+
+    .portrait::before {
+      content: "";
+      position: absolute;
+      width: 66%;
+      height: 78%;
+      left: 17%;
+      top: 10%;
+      border-radius: 46% 46% 42% 42%;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255, 248, 239, 0.55), transparent 16%),
+        linear-gradient(160deg, #f4d9c5, #c89e83 56%, #9a745e);
+      opacity: 0.9;
+      filter: blur(0.1px);
+    }
+
+    .portrait::after {
+      content: "";
+      position: absolute;
+      inset: 36px;
+      border: 1px solid rgba(255, 250, 243, 0.48);
+      border-radius: 34px;
+    }
+
+    .treatment-card {
+      position: absolute;
+      left: 0;
+      bottom: 44px;
+      width: 285px;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255, 250, 243, 0.78);
+      border: 1px solid rgba(23, 21, 18, 0.08);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 60px rgba(23, 21, 18, 0.12);
+    }
+
+    .treatment-card .number {
+      font-family: Georgia, serif;
+      font-size: 2.7rem;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .treatment-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .section {
+      padding: 104px 0;
       position: relative;
-      z-index: 2;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-decorator {
-      position: absolute;
-      top: -24px;
-      right: -24px;
-      width: 140px;
-      height: 140px;
-      border: 1px dashed var(--primary);
-      border-radius: 50%;
-      z-index: 1;
-      opacity: 0.5;
-    }
-
-    .floating-card {
-      position: absolute;
-      bottom: 30px;
-      left: -30px;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 16px 24px;
-      border-radius: 16px;
-      box-shadow: var(--shadow-md);
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .floating-card-icon {
-      background-color: var(--bg-cream);
-      color: var(--primary);
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .floating-card-text p {
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-    }
-
-    .floating-card-text h4 {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
-
-    /* SECCIONES EN GENERAL */
-    section {
-      padding: 100px 0;
     }
 
     .section-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 60px;
-    }
-
-    .section-header .section-tag {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--primary);
-      margin-bottom: 12px;
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 46px;
     }
 
     .section-header h2 {
-      font-family: var(--font-display);
-      font-size: 36px;
-      font-weight: 500;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-    }
-
-    .section-header h2 span.italic {
-      font-style: italic;
-      font-weight: 400;
+      font-size: clamp(2.3rem, 4.3vw, 4.3rem);
+      line-height: 0.98;
+      margin: 12px 0 0;
+      max-width: 720px;
     }
 
     .section-header p {
-      color: var(--text-muted);
-      font-size: 15px;
+      margin: 0;
+      max-width: 390px;
+      color: var(--muted);
     }
 
-    /* BENEFICIOS */
-    .beneficios {
-      background-color: var(--bg-cream);
-    }
-
-    .beneficios-grid {
+    .benefits {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .beneficio-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(5px);
-      padding: 40px 32px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition-smooth);
-      border: 1px solid var(--border-color);
-    }
-
-    .beneficio-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary);
-    }
-
-    .beneficio-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background-color: #ffffff;
-      border: 1px solid var(--border-color);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      font-size: 20px;
-    }
-
-    .beneficio-card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text-dark);
-    }
-
-    .beneficio-card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* SERVICIOS DISPONIBLES (6 Cards Estilo Glassmorphism "Sleek") */
-    .servicios-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .servicio-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .servicio-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary-light);
-    }
-
-    .servicio-img-container {
-      position: relative;
-      height: 220px;
-      overflow: hidden;
-      background-color: #EEDFD2;
-    }
-
-    .servicio-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .servicio-card:hover .servicio-img {
-      transform: scale(1.06);
-    }
-
-    .servicio-tag {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(4px);
-      color: var(--text-dark);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    .servicio-content {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .servicio-content h3 {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-
-    .servicio-content p {
-      color: var(--text-muted);
-      font-size: 13.5px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-
-    .servicio-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .servicio-detail {
-      font-size: 12px;
-      color: var(--text-muted);
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .servicio-price {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--primary-dark);
-    }
-
-    /* ANTES DE RESERVAR */
-    .antes-de-reservar {
-      background-color: var(--bg-cream);
-    }
-
-    .antes-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .antes-desc h2 {
-      font-family: var(--font-display);
-      font-size: 36px;
-      font-weight: 500;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-    }
-
-    .antes-desc h2 span.italic {
-      font-style: italic;
-      font-weight: 400;
-    }
-
-    .antes-desc p {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 30px;
-      line-height: 1.7;
-    }
-
-    .reservar-lista {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .reservar-step {
-      display: flex;
-      gap: 16px;
-    }
-
-    .reservar-num {
-      width: 32px;
-      height: 32px;
-      background-color: var(--primary);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 13px;
-      flex-shrink: 0;
-    }
-
-    .reservar-info h4 {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 4px;
-    }
-
-    .reservar-info p {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* FAQ ACCORDION */
-    .faq-accordion {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
-    }
-
-    .faq-accordion h3 {
-      font-family: var(--font-sans);
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 24px;
-      color: var(--text-dark);
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 12px;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-
-    .faq-header {
-      padding: 18px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .faq-header h4 {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--text-dark);
-      transition: color 0.3s ease;
-    }
-
-    .faq-header:hover h4 {
-      color: var(--primary-dark);
-    }
-
-    .faq-icon {
-      font-size: 16px;
-      color: var(--primary-dark);
-      transition: transform 0.3s ease;
-    }
-
-    .faq-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-    }
-
-    .faq-content p {
-      padding-bottom: 18px;
-      font-size: 13.5px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .faq-item.active .faq-content {
-      max-height: 160px;
-      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    /* TESTIMONIOS (Realistas, Elegantes) */
-    .testimonios-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .testimonio-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
+    .benefit {
+      padding: 34px 30px;
+      min-height: 230px;
+      border-right: 1px solid var(--line);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
     }
 
-    .testimonio-quote {
-      position: absolute;
-      top: 24px;
-      right: 32px;
-      font-size: 52px;
-      color: rgba(212, 163, 115, 0.15);
-      font-family: var(--font-display);
-      line-height: 1;
-      pointer-events: none;
+    .benefit:last-child {
+      border-right: 0;
     }
 
-    .testimonio-stars {
-      display: flex;
-      gap: 4px;
-      color: var(--primary);
-      margin-bottom: 16px;
+    .benefit .index {
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
     }
 
-    .testimonio-text {
-      font-size: 14.5px;
-      color: var(--text-dark);
-      font-style: italic;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .testimonio-user {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonio-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 12px;
-    }
-
-    .testimonio-user-info h4 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
-
-    .testimonio-user-info span {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    /* UBICACION */
-    .ubicacion-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .ubicacion-info h2 {
-      font-family: var(--font-display);
-      font-size: 36px;
-      font-weight: 500;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-    }
-
-    .ubicacion-info h2 span.italic {
-      font-style: italic;
+    .benefit h3 {
+      margin: 30px 0 10px;
+      font-family: Georgia, serif;
+      font-size: 1.58rem;
       font-weight: 400;
+      line-height: 1.08;
     }
 
-    .ubicacion-lead {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--primary-dark);
-      margin-bottom: 12px;
+    .benefit p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
-    .ubicacion-details {
-      margin-bottom: 32px;
+    .treatments-wrap {
+      background: var(--charcoal);
+      color: var(--porcelain);
+      border-radius: 54px;
+      padding: 70px;
+      box-shadow: var(--shadow);
     }
 
-    .ubicacion-detail-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
+    .treatments-wrap .eyebrow {
+      color: var(--sand);
     }
 
-    .ubicacion-detail-icon {
-      color: var(--primary);
-      font-size: 18px;
-    }
-
-    .ubicacion-detail-text h4 {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
-
-    .ubicacion-detail-text p {
-      font-size: 13.5px;
-      color: var(--text-muted);
-    }
-
-    .map-container {
-      height: 380px;
-      background-color: var(--bg-cream);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      border: 4px solid #ffffff;
-    }
-
-    .map-placeholder-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #FCF8F5 0%, #EEDFD2 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-    }
-
-    .map-pin {
-      width: 48px;
-      height: 48px;
-      background-color: var(--primary);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
-    }
-
-    .map-placeholder-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 4px;
-    }
-
-    .map-placeholder-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-      max-width: 280px;
-    }
-
-    /* CTA FINAL */
-    .cta-final {
-      padding: 100px 0;
-      background: linear-gradient(135deg, #4A4440 0%, #362E2A 100%);
-      color: #ffffff;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-final-content {
-      max-width: 600px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-final h2 {
-      font-family: var(--font-display);
-      font-size: 40px;
-      font-weight: 500;
-      line-height: 1.25;
-      margin-bottom: 16px;
-    }
-
-    .cta-final h2 span.italic {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--primary);
-    }
-
-    .cta-final p {
-      font-size: 16px;
-      opacity: 0.85;
+    .treatments-wrap .section-header {
       margin-bottom: 36px;
-      font-weight: 300;
     }
 
-    .cta-final .btn-whatsapp {
-      color: #ffffff !important;
+    .treatments-wrap .section-header p {
+      color: rgba(255, 250, 243, 0.66);
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #FAF3EE;
-      color: var(--text-dark);
-      padding: 80px 0 40px;
-      border-top: 1px solid var(--border-color);
-      font-size: 14px;
+    .treatments {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255, 250, 243, 0.16);
+      border: 1px solid rgba(255, 250, 243, 0.16);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .treatment {
+      background: #1d1a16;
+      padding: 32px;
+      min-height: 235px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .treatment h3 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 1.52rem;
+      font-weight: 400;
+      line-height: 1.12;
+    }
+
+    .treatment p {
+      margin: 18px 0 0;
+      color: rgba(255, 250, 243, 0.64);
+      font-size: 0.94rem;
+    }
+
+    .treatment small {
+      margin-top: 28px;
+      color: var(--sand);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 580px;
+      border-radius: 44px;
+      background:
+        linear-gradient(180deg, rgba(247,243,236,0), rgba(23,21,18,0.16)),
+        linear-gradient(135deg, #c9b694, #f3eadc 48%, #a88d67);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image::before {
+      content: "";
+      position: absolute;
+      inset: 44px;
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,0.42);
+    }
+
+    .about-image::after {
+      content: "";
+      position: absolute;
+      width: 72%;
+      height: 56%;
+      left: 14%;
+      top: 22%;
+      border-radius: 999px 999px 46px 46px;
+      background: rgba(255, 250, 243, 0.28);
+      filter: blur(2px);
+    }
+
+    .about-copy h2 {
+      font-size: clamp(2.2rem, 4.6vw, 4.7rem);
+      line-height: 0.98;
+      margin: 12px 0 24px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 620px;
+    }
+
+    .about-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-list div {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-list strong {
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .about-list span {
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial {
+      padding: 34px;
+      border-radius: 30px;
+      background: var(--porcelain);
+      border: 1px solid var(--line);
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .quote {
+      font-family: Georgia, serif;
+      font-size: 1.36rem;
+      line-height: 1.22;
+      margin: 0;
+    }
+
+    .client {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .booking {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .booking-panel {
+      background: var(--porcelain);
+      border: 1px solid var(--line);
+      border-radius: 42px;
+      padding: 48px;
+    }
+
+    .booking-panel h2 {
+      font-size: clamp(2.2rem, 4.2vw, 4.5rem);
+      line-height: 0.98;
+      margin: 14px 0 20px;
+    }
+
+    .booking-panel p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .map-card {
+      border-radius: 42px;
+      background:
+        linear-gradient(135deg, rgba(23,21,18,0.12), rgba(216,198,172,0.34)),
+        repeating-linear-gradient(45deg, rgba(23,21,18,0.04) 0 1px, transparent 1px 18px);
+      border: 1px solid var(--line);
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-card::after {
+      content: "Mapa / Ubicación";
+      position: absolute;
+      inset: auto 28px 28px auto;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(255, 250, 243, 0.78);
+      color: var(--muted);
+      backdrop-filter: blur(12px);
+      font-size: 0.85rem;
+    }
+
+    .footer {
+      padding: 58px 0 34px;
+      background: var(--charcoal);
+      color: var(--porcelain);
+      margin-top: 60px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 60px;
+      grid-template-columns: 1.2fr repeat(3, 1fr);
+      gap: 28px;
+      padding-bottom: 42px;
+      border-bottom: 1px solid rgba(255,250,243,0.14);
     }
 
-    .footer-col h4 {
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--primary-dark);
+    .footer h3,
+    .footer h4 {
+      margin: 0 0 14px;
+      font-family: Georgia, serif;
+      font-weight: 400;
     }
 
-    .footer-logo {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .footer-logo span {
-      font-weight: 300;
-      color: var(--text-muted);
-    }
-
-    .footer-about {
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      font-size: 13.5px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-    }
-
-    .footer-links a:hover {
-      color: var(--text-dark);
-      padding-left: 2px;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 12px;
-    }
-
-    .social-icon {
-      width: 36px;
-      height: 36px;
-      background-color: rgba(212, 163, 115, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-dark);
-      transition: var(--transition-smooth);
-    }
-
-    .social-icon:hover {
-      background-color: var(--primary);
-      color: #ffffff;
-      transform: translateY(-2px);
+    .footer p,
+    .footer a {
+      display: block;
+      color: rgba(255, 250, 243, 0.66);
+      margin: 0 0 7px;
+      font-size: 0.92rem;
     }
 
     .footer-bottom {
-      border-top: 1px solid var(--border-color);
-      padding-top: 30px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      color: var(--text-muted);
-      font-size: 12.5px;
+      gap: 20px;
+      padding-top: 24px;
+      color: rgba(255, 250, 243, 0.46);
+      font-size: 0.82rem;
     }
 
-    /* RESPONSIVE LAYOUT */
-    @media (max-width: 1024px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-      .hero-cta {
-        justify-content: center;
-      }
-      .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-img-container {
-        height: 400px;
-        max-width: 440px;
-        margin: 0 auto;
-      }
-      .floating-card {
-        left: 20px;
-      }
-      .beneficios-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .servicios-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-      .antes-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .testimonios-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-      .ubicacion-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .floating-whatsapp {
+      position: fixed;
+      z-index: 45;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--charcoal);
+      color: var(--porcelain);
+      box-shadow: 0 18px 60px rgba(23,21,18,0.24);
+      border: 1px solid rgba(255,250,243,0.16);
+      font-weight: 800;
     }
 
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
+    .demo-note {
+      position: fixed;
+      z-index: 44;
+      left: 22px;
+      bottom: 22px;
+      max-width: 300px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: rgba(255,250,243,0.82);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      color: var(--muted);
+      font-size: 0.78rem;
+      box-shadow: 0 12px 40px rgba(23,21,18,0.08);
+    }
+
+    @media (max-width: 960px) {
+      .nav-links a:not(.btn) {
         display: none;
       }
-      .hero h1 {
-        font-size: 36px;
-      }
-      .servicios-grid {
+
+      .hero-grid,
+      .about-grid,
+      .booking {
         grid-template-columns: 1fr;
       }
-      .servicio-card {
-        max-width: 400px;
-        margin: 0 auto;
+
+      .hero {
+        padding-top: 116px;
       }
-      .testimonios-grid {
-        grid-template-columns: 1fr;
+
+      .hero-media {
+        min-height: 520px;
       }
-      .testimonio-card {
-        max-width: 400px;
-        margin: 0 auto;
+
+      .portrait {
+        height: 500px;
+        width: 88%;
       }
+
+      .treatment-card {
+        left: 4%;
+        bottom: 20px;
+      }
+
+      .section-header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .benefits,
+      .treatments,
+      .testimonials,
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
       }
-      .cta-final h2 {
-        font-size: 30px;
+
+      .benefit {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .benefit:last-child {
+        border-bottom: 0;
+      }
+
+      .treatments-wrap {
+        padding: 42px 22px;
+        border-radius: 34px;
+      }
+
+      .about-image {
+        min-height: 420px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 26px, 1180px);
+      }
+
+      .nav {
+        top: 10px;
+        width: calc(100% - 20px);
+      }
+
+      .brand-text span {
+        display: none;
+      }
+
+      .nav .btn {
+        min-height: 40px;
+        padding: 0 14px;
+        font-size: 0.82rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 16vw, 4.5rem);
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-media {
+        min-height: 440px;
+      }
+
+      .portrait {
+        width: 100%;
+        height: 420px;
+        border-radius: 32px;
+      }
+
+      .treatment-card {
+        width: calc(100% - 34px);
+        left: 17px;
+        padding: 20px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .booking-panel {
+        padding: 32px 24px;
+        border-radius: 30px;
+      }
+
+      .map-card {
+        min-height: 300px;
+        border-radius: 30px;
+      }
+
+      .demo-note {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- BANNER EXPLICATIVO COMERCIAL (Removible) -->
-  <div class="demo-banner" id="demoBanner">
-    <div class="demo-banner-content">
-      <div class="demo-text">
-        <span>💫 <strong>Demo Premium:</strong> Reemplaza el desorden de <i>"Precio al DM"</i> por conversiones directas e inmediatas por WhatsApp.</span>
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span class="demo-action">Aesthetic &amp; Minimalista</span>
-        <button class="demo-close" onclick="closeDemoBanner()">&times;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER -->
-  <header>
-    <div class="container header-container">
-      <div class="logo-container">
-        <div class="logo-badge">BI</div>
-        <a href="#inicio" class="logo">Belleza Integral<span> Studio</span></a>
-      </div>
-      
-      <ul class="nav-links">
-        <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#servicios">Tratamientos</a></li>
-        <li><a href="#antes-de-reservar">Preguntas</a></li>
-        <li><a href="#ubicacion">Contacto</a></li>
-        <li><a href="https://wa.me/5491100000000" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Agendar Cita</a></li>
-      </ul>
-
-      <button class="menu-toggle" onclick="openMenu()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- MOBILE NAVIGATION DRAWER -->
-  <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-      <div class="logo-container">
-        <div class="logo-badge">BI</div>
-        <div class="logo">Belleza Integral</div>
-      </div>
-      <button onclick="closeMenu()" style="background:none; border:none; color:var(--text-dark); font-size: 28px; cursor:pointer;">&times;</button>
-    </div>
-    <ul class="mobile-nav-links">
-      <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
-      <li><a href="#beneficios" onclick="closeMenu()">Beneficios</a></li>
-      <li><a href="#servicios" onclick="closeMenu()">Tratamientos</a></li>
-      <li><a href="#antes-de-reservar" onclick="closeMenu()">Cómo reservar</a></li>
-      <li><a href="#ubicacion" onclick="closeMenu()">Contacto</a></li>
-    </ul>
-    <div class="mobile-menu-footer">
-      <a href="https://wa.me/5491100000000" class="btn btn-whatsapp btn-full">Reservar por WhatsApp</a>
-    </div>
-  </div>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div class="hero-text-container">
-        <div class="hero-tag">Sleek, Clean &amp; Professional</div>
-        <h1>Resaltá tu <br><span class="italic">belleza natural</span></h1>
-        <p class="hero-subtitle">
-          Convertimos tu rutina de cuidado personal en una experiencia de bienestar única. Tratamientos premium respaldados por aparatología de punta y atención sumamente profesional.
-        </p>
-        <div class="hero-cta">
-          <a href="https://wa.me/5491100000000?text=Hola!%20Me%20interesa%20coordinar%20un%20turno%20en%20Belleza%20Integral%20Studio." class="btn btn-whatsapp">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.743-.981z"/></svg>
-            Agendar por WhatsApp
-          </a>
-          <a href="#servicios" class="btn btn-secondary">Ver tratamientos</a>
-        </div>
-      </div>
-      <div class="hero-img-wrapper">
-        <div class="hero-decorator"></div>
-        <div class="hero-img-container">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Estética Facial" class="hero-img">
-        </div>
-        <div class="floating-card">
-          <div class="floating-card-icon">🎯</div>
-          <div class="floating-card-text">
-            <p>Sede Oficial</p>
-            <h4>Provincia de Buenos Aires</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN BENEFICIOS -->
-  <section class="beneficios" id="beneficios">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Nuestras Fortalezas</span>
-        <h2>Experiencia de <span>gabinete real</span></h2>
-        <p>Unificamos profesionalismo médico con el confort de un spa de primer nivel para brindar paz y resultados medibles.</p>
-      </div>
-
-      <div class="beneficios-grid">
-        <!-- Beneficio 1 -->
-        <div class="beneficio-card">
-          <div class="beneficio-icon">✨</div>
-          <h3>Atención Personalizada</h3>
-          <p>Análisis minucioso del tipo de piel y características corporales previo a cualquier protocolo de tratamiento en cabina.</p>
-        </div>
-
-        <!-- Beneficio 2 -->
-        <div class="beneficio-card">
-          <div class="beneficio-icon">🗓️</div>
-          <h3>Turnos por WhatsApp</h3>
-          <p>Coordiná tu cita en segundos. Olvidadte de esperar largas respuestas en comentarios o mails. Comunicación ágil de verdad.</p>
-        </div>
-
-        <!-- Beneficio 3 -->
-        <div class="beneficio-card">
-          <div class="beneficio-icon">🛡️</div>
-          <h3>Tratamientos Seguros</h3>
-          <p>Cosmecéutica de primer nivel y aparatología certificada. Maximizamos el cuidado e higiene en todas nuestras salas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN SERVICIOS -->
-  <section class="servicios" id="servicios">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Nuestra Colección de Servicios</span>
-        <h2>Tratamientos <span>Especializados</span></h2>
-        <p>Seleccioná la sesión ideal para revitalizar tu piel, tonificar tu cuerpo o simplemente desconectarte del estrés de la rutina.</p>
-      </div>
-
-      <div class="servicios-grid">
-        <!-- Servicio 1: Limpieza facial profunda -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Facial</span>
-            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80" alt="Limpieza facial profunda" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Limpieza Facial Profunda</h3>
-            <p>Remoción de impurezas y puntos negros de forma segura. Incluye exfoliación mecánica, vaporización, extracción y mascarilla nutritiva.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">⏱️ 60 min</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20saber%20más%20sobre%20la%20Limpieza%20Facial%20Profunda." class="servicio-price" style="text-decoration: underline;">Consultar Turno</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Servicio 2: Tratamientos corporales -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Corporal</span>
-            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Tratamientos corporales" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Tratamientos Corporales</h3>
-            <p>Sesiones personalizadas de reducción, firmeza y tonificación localizada utilizando aparatología especializada y principios activos.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">⏱️ 75 min</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Me%20interesan%20los%20Tratamientos%20Corporales." class="servicio-price" style="text-decoration: underline;">Consultar Turno</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Servicio 3: Depilación definitiva -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Tecnología</span>
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Depilación definitiva" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Depilación Definitiva</h3>
-            <p>Tecnología láser de última generación aplicable a todo tipo de pieles de manera eficaz, logrando una piel suave durante meses.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">Por Sesión / Zona</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20promociones%20de%20Depilación%20Definitiva." class="servicio-price" style="text-decoration: underline;">Ver Packs</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Servicio 4: Masajes relajantes -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Desconexión</span>
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Masajes relajantes" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Masajes Relajantes</h3>
-            <p>Alivio de tensiones mediante técnicas manuales suaves y aceites esenciales. Ideal para calmar la mente y revitalizar el cuerpo de fatiga acumulada.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">⏱️ 50 min</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20una%20sesión%20de%20Masajes%20Relajantes." class="servicio-price" style="text-decoration: underline;">Consultar Turno</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Servicio 5: Perfilado de cejas -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Mirada</span>
-            <img src="https://images.unsplash.com/photo-1522337094133-f3750e0268e4?auto=format&fit=crop&w=600&q=80" alt="Perfilado de cejas" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Perfilado de Cejas</h3>
-            <p>Diseño y depilación geométrica para potenciar la expresión natural de tu mirada basándonos en tu simetría facial.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">⏱️ 30 min</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Me%20gustaría%20visitarte%20para%20un%20Perfilado%20de%20Cejas." class="servicio-price" style="text-decoration: underline;">Consultar Turno</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Servicio 6: Maderoterapia -->
-        <div class="servicio-card">
-          <div class="servicio-img-container">
-            <span class="servicio-tag">Técnica Natural</span>
-            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80" alt="Maderoterapia" class="servicio-img">
-          </div>
-          <div class="servicio-content">
-            <h3>Maderoterapia</h3>
-            <p>Terapia con elementos de madera noble que estimula la cirulación, drena la retención de líquidos y modela tu silueta de forma holística.</p>
-            <div class="servicio-footer">
-              <span class="servicio-detail">⏱️ 60 min</span>
-              <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20conocer%20los%20planes%20de%20Maderoterapia." class="servicio-price" style="text-decoration: underline;">Consultar Turno</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN "ANTES DE RESERVAR" -->
-  <section class="antes-de-reservar" id="antes-de-reservar">
-    <div class="container antes-grid">
-      <div class="antes-desc">
-        <h2>Antes de reservar: <br><span class="italic">Creemos en el orden</span></h2>
-        <p>Para brindarte una atención impecable y de altísima calidad, manejamos todas nuestras consultas de forma prolija a través de WhatsApp. Así nos organizamos para tu llegada:</p>
-        
-        <div class="reservar-lista">
-          <div class="reservar-step">
-            <div class="reservar-num">1</div>
-            <div class="reservar-info">
-              <h4>Consultá sin compromiso</h4>
-              <p>Escribinos y contanos qué zona o tratamiento querés realizarte. Incluso podés especificarnos tu biotipo cutáneo actual.</p>
-            </div>
-          </div>
-          <div class="reservar-step">
-            <div class="reservar-num">2</div>
-            <div class="reservar-info">
-              <h4>Acordamos horario</h4>
-              <p>Te mostramos la disponibilidad en tiempo real para reservar tu cabina exclusiva.</p>
-            </div>
-          </div>
-          <div class="reservar-step">
-            <div class="reservar-num">3</div>
-            <div class="reservar-info">
-              <h4>Seña de seguridad</h4>
-              <p>Asegurás tu lugar mediante una transferencia de seña accesible, y el día de la cita abonás la diferencia restante.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Accordion -->
-      <div class="faq-accordion">
-        <h3>Dudas Frecuentes</h3>
-        
-        <div class="faq-item active" onclick="toggleFaq(this)">
-          <div class="faq-header">
-            <h4>¿Cómo se abona la seña?</h4>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-content">
-            <p>Aceptamos Mercado Pago, transferencia bancaria y efectivo directamente en el gabinete. Para confirmar y congelar el horario, te solicitamos el envío del comprobante de seña.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-header">
-            <h4>¿Puedo reprogramar si surge un imprevisto?</h4>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-content">
-            <p>¡Sí, totalmente! Te pedimos que nos avises con al menos 24 horas de anticipación por WhatsApp para reorganizar el gabinete sin penalidades ni pérdida de seña.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-header">
-            <h4>¿Cuál es la tolerancia por retrasos en el turno?</h4>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-content">
-            <p>Ofrecemos una tolerancia máxima de 10 minutos. Es fundamental para garantizar que cada clienta reciba su tratamiento completo en un ambiente relajado y puntual.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN TESTIMONIOS -->
-  <section class="testimonios" id="testimonios">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Ellas confían en nosotras</span>
-        <h2>Experiencias <span>Inolvidables</span></h2>
-        <p>Conocé la opinión sincera de clientas reales de Buenos Aires que decidieron priorizar su cuidado en nuestras manos.</p>
-      </div>
-
-      <div class="testimonios-grid">
-        <!-- Testimonio 1 -->
-        <div class="testimonio-card">
-          <span class="testimonio-quote">“</span>
-          <div>
-            <div class="testimonio-stars">
-              ⭐⭐⭐⭐⭐
-            </div>
-            <p class="testimonio-text">
-              "Me encantó la limpieza facial profunda. Las chicas te asesoran en cada paso. Reservar por WhatsApp fue súper cómodo, nada de andar enviando Mensajes Directos interminables esperando respuesta."
-            </p>
-          </div>
-          <div class="testimonio-user">
-            <div class="testimonio-avatar">ML</div>
-            <div class="testimonio-user-info">
-              <h4>Mariana L.</h4>
-              <span>San Isidro, GBA</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonio 2 -->
-        <div class="testimonio-card">
-          <span class="testimonio-quote">“</span>
-          <div>
-            <div class="testimonio-stars">
-              ⭐⭐⭐⭐⭐
-            </div>
-            <p class="testimonio-text">
-              "Fui por primera vez por maderoterapia corporal y noté mis piernas sumamente aliviadas de la retención de líquidos. El ambiente está impecable y huele riquísimo. Súper profesional."
-            </p>
-          </div>
-          <div class="testimonio-user">
-            <div class="testimonio-avatar">SR</div>
-            <div class="testimonio-user-info">
-              <h4>Sofía R.</h4>
-              <span>Vicente López, GBA</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonio 3 -->
-        <div class="testimonio-card">
-          <span class="testimonio-quote">“</span>
-          <div>
-            <div class="testimonio-stars">
-              ⭐⭐⭐⭐⭐
-            </div>
-            <p class="testimonio-text">
-              "Hacerme el perfilado de cejas acá fue un viaje de ida. Tienen un ojo fantástico para los detalles. La atención en el studio transmite paz real desde el primer instante."
-            </p>
-          </div>
-          <div class="testimonio-user">
-            <div class="testimonio-avatar">VP</div>
-            <div class="testimonio-user-info">
-              <h4>Valeria P.</h4>
-              <span>Martínez, GBA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- UBICACIÓN & CONTACTO -->
-  <section class="ubicacion" id="ubicacion">
-    <div class="container ubicacion-grid">
-      <div class="ubicacion-info">
-        <span class="ubicacion-lead">📍 Ubicación Estratégica</span>
-        <h2>Atendemos en<br><span class="italic">Provincia de Buenos Aires</span></h2>
-        <p class="hero-subtitle" style="margin-bottom: 24px;">Encontranos en una zona segura, de fácil acceso y con cómodos espacios de estacionamiento aledaños para que tu visita sea libre de tensiones.</p>
-        
-        <div class="ubicacion-details">
-          <div class="ubicacion-detail-item">
-            <div class="ubicacion-detail-icon">🗺️</div>
-            <div class="ubicacion-detail-text">
-              <h4>Dirección</h4>
-              <p>Calle Demo 123, Provincia de Buenos Aires, Argentina</p>
-            </div>
-          </div>
-          
-          <div class="ubicacion-detail-item">
-            <div class="ubicacion-detail-icon">⏰</div>
-            <div class="ubicacion-detail-text">
-              <h4>Horarios de Citas</h4>
-              <p>Martes a Sábado: 09:00 a 19:30 hs. (Previa Reserva)</p>
-            </div>
-          </div>
-        </div>
-
-        <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20cómo%20llegar%20y%20reservar%20una%20cita." class="btn btn-whatsapp">
-          Consultar cómo llegar
-        </a>
-      </div>
-
-      <div class="map-container">
-        <!-- Interactive Sleek Map Placeholder -->
-        <div class="map-placeholder-bg">
-          <div class="map-pin">📍</div>
-          <div class="map-placeholder-title">Belleza Integral Studio</div>
-          <div class="map-placeholder-desc">Calle Demo 123, Provincia de Buenos Aires</div>
-          <a href="https://wa.me/5491100000000" class="btn btn-secondary" style="font-size: 12px; padding: 10px 20px;">Abrir en Google Maps</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-final">
-    <div class="cta-final-decorator"></div>
-    <div class="cta-final-content">
-      <h2>Reservá tu turno <br><span class="italic">por WhatsApp hoy</span></h2>
-      <p>Evitá demoras y resguardá tu espacio exclusivo. ¡Te responderemos enseguida para coordinar el horario ideal para vos!</p>
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20mi%20cuidado%20hoy." class="btn btn-whatsapp btn-full" style="max-width: 320px; display: inline-flex;">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.743-.981z"/></svg>
-        Reservar Mi Espacio
+  <div class="page">
+    <header class="nav" aria-label="Navegación principal">
+      <a href="#" class="brand" aria-label="Belleza Integral Studio">
+        <span class="brand-mark">B</span>
+        <span class="brand-text">
+          <strong>Belleza Integral</strong>
+          <span>Studio estético</span>
+        </span>
       </a>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <div class="footer-logo">Belleza Integral<span> Studio</span></div>
-        <p class="footer-about">
-          Desarrollado con suma dedicación y el concepto Minimal Spa para la digitalización real de centros de estética.
-        </p>
-        <div class="social-links">
-          <a href="#" class="social-icon">IG</a>
-          <a href="#" class="social-icon">FB</a>
-          <a href="https://wa.me/5491100000000" class="social-icon">WA</a>
+      <nav class="nav-links">
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#nosotros">El estudio</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="btn btn-primary" href="https://wa.me/5491100000000" target="_blank" rel="noopener">Reservar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Estética avanzada · Buenos Aires</div>
+            <h1 class="serif">Belleza natural, tratada con precisión.</h1>
+            <p>Tratamientos faciales y corporales con atención personalizada, protocolos seguros y reserva directa por WhatsApp.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/5491100000000" target="_blank" rel="noopener">Reservar consulta</a>
+              <a class="btn btn-secondary" href="#tratamientos">Conocer tratamientos</a>
+            </div>
+
+            <div class="hero-proof" aria-label="Indicadores de confianza">
+              <div>
+                <strong>+6</strong>
+                <span>tratamientos destacados</span>
+              </div>
+              <div>
+                <strong>1:1</strong>
+                <span>atención personalizada</span>
+              </div>
+              <div>
+                <strong>WA</strong>
+                <span>turnos por WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <div class="portrait"></div>
+            <div class="treatment-card">
+              <div class="number">01</div>
+              <p>Primero escuchamos tu objetivo. Después recomendamos el tratamiento adecuado para tu piel, cuerpo y rutina.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="eyebrow">Por qué elegirnos</div>
+              <h2 class="serif">Un espacio pensado para cuidarte mejor.</h2>
+            </div>
+            <p>Combinamos criterio profesional, experiencia estética y una experiencia de reserva simple para que puedas consultar sin fricción.</p>
+          </div>
+
+          <div class="benefits">
+            <article class="benefit">
+              <span class="index">01</span>
+              <div>
+                <h3>Atención personalizada</h3>
+                <p>Cada tratamiento se recomienda según tu objetivo, historial y expectativas reales.</p>
+              </div>
+            </article>
+            <article class="benefit">
+              <span class="index">02</span>
+              <div>
+                <h3>Protocolos seguros</h3>
+                <p>Trabajamos con procedimientos claros, higiene cuidada y acompañamiento antes y después.</p>
+              </div>
+            </article>
+            <article class="benefit">
+              <span class="index">03</span>
+              <div>
+                <h3>Reservas simples</h3>
+                <p>Consultá disponibilidad, tratamientos y valores directamente por WhatsApp.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tratamientos">
+        <div class="container">
+          <div class="treatments-wrap">
+            <div class="section-header">
+              <div>
+                <div class="eyebrow">Tratamientos</div>
+                <h2 class="serif">Servicios seleccionados para resultados visibles.</h2>
+              </div>
+              <p>No ofrecemos tratamientos aislados. Diseñamos una experiencia estética coherente con tu piel, cuerpo y estilo de vida.</p>
+            </div>
+
+            <div class="treatments">
+              <article class="treatment">
+                <div>
+                  <h3>Limpieza facial profunda</h3>
+                  <p>Higiene, extracción y renovación para una piel más luminosa y equilibrada.</p>
+                </div>
+                <small>Facial</small>
+              </article>
+
+              <article class="treatment">
+                <div>
+                  <h3>Tratamientos corporales</h3>
+                  <p>Protocolos orientados a tonificar, modelar y acompañar objetivos corporales.</p>
+                </div>
+                <small>Corporal</small>
+              </article>
+
+              <article class="treatment">
+                <div>
+                  <h3>Depilación definitiva</h3>
+                  <p>Sesiones programadas con evaluación previa y seguimiento personalizado.</p>
+                </div>
+                <small>Tecnología</small>
+              </article>
+
+              <article class="treatment">
+                <div>
+                  <h3>Maderoterapia</h3>
+                  <p>Técnica manual para drenaje, modelado y mejora de la apariencia corporal.</p>
+                </div>
+                <small>Manual</small>
+              </article>
+
+              <article class="treatment">
+                <div>
+                  <h3>Perfilado de cejas</h3>
+                  <p>Diseño armónico para enmarcar la mirada respetando tus facciones.</p>
+                </div>
+                <small>Mirada</small>
+              </article>
+
+              <article class="treatment">
+                <div>
+                  <h3>Masajes relajantes</h3>
+                  <p>Un momento de pausa para aliviar tensión, descansar y reconectar.</p>
+                </div>
+                <small>Bienestar</small>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="nosotros">
+        <div class="container about-grid">
+          <div class="about-image" aria-hidden="true"></div>
+          <div class="about-copy">
+            <div class="eyebrow">El estudio</div>
+            <h2 class="serif">Criterio profesional en una experiencia cercana.</h2>
+            <p>Belleza Integral Studio nace para ordenar la experiencia estética: información clara, tratamientos bien explicados y una reserva simple para que cada persona llegue con confianza.</p>
+            <p>La primera consulta permite entender tus objetivos y recomendar el camino más adecuado, sin promesas exageradas ni procedimientos innecesarios.</p>
+
+            <div class="about-list">
+              <div>
+                <strong>Enfoque</strong>
+                <span>Natural, sobrio y personalizado</span>
+              </div>
+              <div>
+                <strong>Reserva</strong>
+                <span>WhatsApp con respuesta directa</span>
+              </div>
+              <div>
+                <strong>Atención</strong>
+                <span>Provincia de Buenos Aires</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="eyebrow">Experiencias</div>
+              <h2 class="serif">Confianza antes, durante y después.</h2>
+            </div>
+            <p>Testimonios de ejemplo para mostrar cómo se vería esta sección con opiniones reales de clientas.</p>
+          </div>
+
+          <div class="testimonials">
+            <article class="testimonial">
+              <p class="quote">“Me explicaron todo con claridad y sentí que el tratamiento estaba pensado para mí.”</p>
+              <div class="client">Marina · Tratamiento facial</div>
+            </article>
+            <article class="testimonial">
+              <p class="quote">“Reservé por WhatsApp, me respondieron rápido y la atención fue muy profesional.”</p>
+              <div class="client">Laura · Consulta corporal</div>
+            </article>
+            <article class="testimonial">
+              <p class="quote">“El lugar transmite calma, orden y confianza. Volvería sin dudarlo.”</p>
+              <div class="client">Sofía · Maderoterapia</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ubicacion">
+        <div class="container booking">
+          <div class="booking-panel">
+            <div class="eyebrow">Reservas</div>
+            <h2 class="serif">Solicitá una consulta personalizada.</h2>
+            <p>Contanos qué tratamiento te interesa o qué objetivo tenés. Te orientamos por WhatsApp y coordinamos el mejor horario disponible.</p>
+            <a class="btn btn-primary" href="https://wa.me/5491100000000" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="map-card" aria-label="Ubicación del centro de estética"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Belleza Integral Studio</h3>
+            <p>Landing demo para centros de estética que buscan convertir visitas de Instagram en consultas por WhatsApp.</p>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+          <div>
+            <h4>Servicios</h4>
+            <p>Faciales</p>
+            <p>Corporales</p>
+            <p>Depilación definitiva</p>
+          </div>
+          <div>
+            <h4>Ubicación</h4>
+            <p>Provincia de Buenos Aires</p>
+            <p>Atención con turno previo</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Belleza Integral Studio. Demo comercial editable.</span>
+          <span>Diseño orientado a consultas por WhatsApp.</span>
         </div>
       </div>
-      
-      <div class="footer-col">
-        <h4>Tratamientos</h4>
-        <ul class="footer-links">
-          <li><a href="#servicios">Limpieza Facial</a></li>
-          <li><a href="#servicios">Maderoterapia</a></li>
-          <li><a href="#servicios">Depilación Láser</a></li>
-          <li><a href="#servicios">Masajes Relajantes</a></li>
-        </ul>
-      </div>
+    </footer>
 
-      <div class="footer-col">
-        <h4>Studio</h4>
-        <ul class="footer-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#antes-de-reservar">Preguntas Frecuentes</a></li>
-          <li><a href="#ubicacion">Donde estamos</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contacto Directo</h4>
-        <ul class="footer-links" style="color:var(--text-muted); font-size:13px; line-height:1.6;">
-          <li>📍 Calle Demo 123, Provincia de Buenos Aires, AR.</li>
-          <li>🟢 WhatsApp: <a href="https://wa.me/5491100000000" style="color:var(--primary-dark); font-weight:600;">+54 9 11 0000-0000</a></li>
-          <li>📩 email: contacto@bellezaintegral.demo</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>© 2026 Belleza Integral Studio. Todos los derechos reservados. Landing Demo Premium.</p>
-      <div style="display:flex; gap:16px;">
-        <a href="#" style="color:var(--text-muted);">Términos</a>
-        <a href="#" style="color:var(--text-muted);">Privacidad</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // FAQ Accordion Toggle
-    function toggleFaq(element) {
-      // Toggle active target
-      element.classList.toggle('active');
-      
-      // Close sibling items
-      const siblings = element.parentNode.querySelectorAll('.faq-item');
-      siblings.forEach(item => {
-        if (item !== element) {
-          item.classList.remove('active');
-        }
-      });
-    }
-
-    // Toggle Mobile Navigation Drawer
-    function openMenu() {
-      document.getElementById('mobileMenu').classList.add('active');
-      document.getElementById('menuOverlay').classList.add('active');
-    }
-
-    function closeMenu() {
-      document.getElementById('mobileMenu').classList.remove('active');
-      document.getElementById('menuOverlay').classList.remove('active');
-    }
-
-    // Banner closing
-    function closeDemoBanner() {
-      const banner = document.getElementById('demoBanner');
-      banner.style.display = 'none';
-    }
-  </script>
+    <a class="floating-whatsapp" href="https://wa.me/5491100000000" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">WA</a>
+    <div class="demo-note">Demo comercial adaptable: nombre, colores, fotos, tratamientos, ubicación y WhatsApp.</div>
+  </div>
 </body>
 </html>

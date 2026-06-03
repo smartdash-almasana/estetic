@@ -1,0 +1,6 @@
+{
+  "name": "Belleza Integral Studio",
+  "description": "Landing page demo premium para centro de estética profesional. Diseñada para convertir visitas de Instagram en consultas y reservas por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
